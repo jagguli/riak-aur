@@ -4,9 +4,9 @@ After=network.target
 
 [Service]
 User=riak
-Type=forking
-ExecStart=/opt/riak/bin/riak start
-ExecStop=/opt/riak/bin/riak stop
+Type=simple
+ExecStart=/usr/sbin/riak foreground
+ExecStop=/usr/sbin/riak stop
 LimitNOFILE=65536
 
 [Install]
